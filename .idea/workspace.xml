@@ -1,10 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/Typing_Data_Aanalyzer.py" line="12" />
+    <bookmark url="file://$PROJECT_DIR$/Typing_Data_Analyzer_demo.py" line="54" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ce6e670-1d4b-4755-8dba-1fcc67eb4ab6" name="Default Changelist" comment="" />
+    <list default="true" id="6ce6e670-1d4b-4755-8dba-1fcc67eb4ab6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Typing_Data_Analyzer_demo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Typing_Data_Analyzer_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/language_model_test.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/language_model_train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/touch_model_train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Typing Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Typing Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_I hate baking pies_05-11-2020_125704_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_I like baroque and classical music_05-11-2020_130022_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_I listen to the tape everyday_05-11-2020_125821_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_I spilled coffee on the carpet_05-11-2020_130010_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_I want to hold your hand_05-11-2020_125723_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_a coupon for a free sample_05-11-2020_125639_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_a glance in the right direction_05-11-2020_125935_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_a good response to the question_05-11-2020_125839_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_an occasional taste of chocolate_05-11-2020_125750_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_apartments are too expensive_05-11-2020_125508_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_are you sure you want this_05-11-2020_125846_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_be persistent to win a strike_05-11-2020_125355_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_do a good deed to someone_05-11-2020_125952_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_do not lie in court or else_05-11-2020_125918_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_every apple from every tree_05-11-2020_125618_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_everyone wants to win the lottery_05-11-2020_125858_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_her majesty visited our country_05-11-2020_130001_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_information super highway_05-11-2020_125739_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_interactions between men and women_05-11-2020_125829_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_interesting observation was made_05-11-2020_125808_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_it is very windy today_05-11-2020_125813_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_join us on the patio_05-11-2020_125542_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_just like it says on the can_05-11-2020_125537_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_knee bone is connected to the thigh bone_05-11-2020_130049_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_my favorite web browser_05-11-2020_125732_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_nobody cares anymore_05-11-2020_125644_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_olympic athletes use drugs_05-11-2020_125410_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_only an idiot would lie in court_05-11-2020_125716_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_parking tickets can be challenged_05-11-2020_125419_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_please follow the guidelines_05-11-2020_125607_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_reading week is just about here_05-11-2020_125516_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_rectangular objects have four sides_05-11-2020_125530_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_so you think you deserve a raise_05-11-2020_125442_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_space is a high priority_05-11-2020_125402_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_stay away from strangers_05-11-2020_125624_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_that is a very odd question_05-11-2020_125943_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_the accident scene is a shrine for fans_05-11-2020_130033_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_the early bird gets the worm_05-11-2020_125550_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_the rationale behind the decision_05-11-2020_125425_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_the winner of the race_05-11-2020_125521_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_they love to yap about nothing_05-11-2020_125500_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_they might find your comment offensive_05-11-2020_125908_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_this leather jacket is too warm_05-11-2020_125927_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_traveling to conferences is fun_05-11-2020_125452_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_try to enjoy your maternity leave_05-11-2020_125800_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_victims deserve more redress_05-11-2020_125559_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_we have enough witnesses_05-11-2020_125651_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_we went grocery shopping_05-11-2020_125433_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_win first prize in the contest_05-11-2020_125632_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_wishful thinking is fine_05-11-2020_125657_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_I agree with you_05-11-2020_060300_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_I am going to a music lesson_05-11-2020_060159_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_I am wearing a tie and a jacket_05-11-2020_060323_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_I can see the rings on Saturn_05-11-2020_060238_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_I took the rover from the shop_05-11-2020_060315_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_Valium in the economy size_05-11-2020_060332_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_a problem with the engine_05-11-2020_060824_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_all good boys deserve fudge_05-11-2020_060710_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_are you talking to me_05-11-2020_060354_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_call for more details_05-11-2020_060607_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_can I skate with sister today_05-11-2020_060649_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_circumstances are unacceptable_05-11-2020_060527_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_come and see our new car_05-11-2020_060434_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_did you have a good time_05-11-2020_060509_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_do not drink too much_05-11-2020_060518_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_do not squander your time_05-11-2020_060454_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_elections bring out the best_05-11-2020_060757_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_fish are jumping_05-11-2020_060748_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_goldilocks and the three bears_05-11-2020_060428_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_great disturbance in the force_05-11-2020_060832_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_have a good weekend_05-11-2020_060337_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_he is just like everyone else_05-11-2020_060443_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_he is still on our team_05-11-2020_060551_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_mom made her a turtleneck_05-11-2020_060725_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_my bank account is overdrawn_05-11-2020_060619_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_my favorite place to visit_05-11-2020_060817_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_my favorite web browser_05-11-2020_060501_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_my preferred treat is chocolate_05-11-2020_060347_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_my watch fell in the water_05-11-2020_060743_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_never too rich and never too thin_05-11-2020_060734_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_popularity is desired by all_05-11-2020_060411_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_prayer in schools offends some_05-11-2020_060215_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_prevailing wind from the east_05-11-2020_060559_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_round robin scheduling_05-11-2020_060206_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_space is a high priority_05-11-2020_060307_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the assignment is due today_05-11-2020_060808_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the cotton is high_05-11-2020_060612_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the facts get in the way_05-11-2020_060542_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the force is with you_05-11-2020_060802_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the laser printer is jammed_05-11-2020_060255_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the power of denial_05-11-2020_060221_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the store will close at ten_05-11-2020_060535_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the world is a stage_05-11-2020_060359_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_video camera with a zoom lens_05-11-2020_060658_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_we are subjects and must obey_05-11-2020_060628_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_we run the risk of failure_05-11-2020_060246_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_wear a crown with many jewels_05-11-2020_060419_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_what a monkey sees a monkey will do_05-11-2020_060641_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_yes you are very smart_05-11-2020_060716_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_you are not a jedi yet_05-11-2020_060228_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Typing_Data_Aanalyzer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Typing_data_test/Eric_Sitting_breathing is difficult.xls" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,36 +127,115 @@
     <session id="-51754656">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.closed" value="23" />
+          <entry key="project.open.time.0" value="6" />
+          <entry key="project.open.time.1" value="2" />
+          <entry key="project.open.time.4" value="4" />
+          <entry key="project.open.time.5" value="10" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="3102" />
+          <entry key="Python Console" value="13" />
+          <entry key="dummy" value="18" />
+          <entry key="py" value="12913" />
+          <entry key="txt" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="3102" />
+          <entry key="PLAIN_TEXT" value="24" />
+          <entry key="Python" value="12926" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="jpg" value="2" />
+          <entry key="py" value="18" />
+          <entry key="txt" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Image" value="2" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="Python" value="18" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="Typing Project" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Typing_Data_Aanalyzer.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Typing_Data_Analyzer_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+            <state relative-caret-position="5865">
+              <caret line="356" selection-start-line="356" selection-end-line="356" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1604610059963" expanded="true" signature="124:149" ph="..." />
-                <marker date="1604610059963" expanded="true" signature="2201:2206" ph="..." />
+                <marker date="1606339933863" expanded="true" signature="1041:1043" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Typing_Data_Analyzer_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="8789">
+              <caret line="528" column="75" selection-start-line="528" selection-start-column="75" selection-end-line="528" selection-end-column="75" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+                <marker date="1607622369203" expanded="true" signature="15609:15612" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/moving_average.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="527">
+              <caret line="31" column="52" lean-forward="true" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/language_model_train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="20" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="e#0#11#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/touch_model_train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4318">
+              <caret line="264" selection-start-line="264" selection-end-line="264" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/language_model_test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
             </state>
           </provider>
         </entry>
@@ -58,24 +249,75 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>create_touch_data</find>
+      <find>create</find>
+      <find>create_touch</find>
+      <find>touch_data</find>
+      <find>get_touch_data</find>
+      <find>100</find>
+      <find>get_touch</find>
+      <find>invalid</find>
+      <find>char_list</find>
+      <find>training</find>
+      <find>predict</find>
+      <find>true_co</find>
+      <find>generated</find>
+      <find>predict_char</find>
+      <find>glob</find>
+      <find>pred</find>
+      <find>print</find>
+      <find>corrected</find>
+      <find>typed_</find>
+      <find>sitting</find>
+      <find>inte</find>
+      <find>context</find>
+      <find>pred_char</find>
+      <find>int_str</find>
+      <find>corre</find>
+      <find>correc</find>
+      <find>cor</find>
+      <find>revised</find>
+      <find>uncorrected</find>
+      <find>_corrected</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/CSC428_A2_format_data.py" />
+        <option value="$PROJECT_DIR$/Process_ANOVA_data/P1_F1L2F2L3F3L2_POINT_data__0.txt" />
         <option value="$PROJECT_DIR$/Typing_Data_Aanalyzer.py" />
+        <option value="$PROJECT_DIR$/Process_ANOVA_data/CSC428_A2_format_data.py" />
+        <option value="$PROJECT_DIR$/Typing_Data_Analyzer.py" />
+        <option value="$PROJECT_DIR$/walking_character_pattern/kneser_ney.py" />
+        <option value="$PROJECT_DIR$/language_model.py" />
+        <option value="$PROJECT_DIR$/languagge_model_test.py" />
+        <option value="$PROJECT_DIR$/touch_model.py" />
+        <option value="$PROJECT_DIR$/language_model_test.py" />
+        <option value="$PROJECT_DIR$/language_model_train.py" />
+        <option value="$PROJECT_DIR$/Typing_Data_Analyzer_demo.py" />
+        <option value="$PROJECT_DIR$/touch_model_train.py" />
+        <option value="$PROJECT_DIR$/Typing_Data_Analyzer_test.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="952" />
-    <option name="y" value="-8" />
-    <option name="width" value="976" />
-    <option name="height" value="1056" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -91,11 +333,16 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Owner/Desktop/Typing Project/Typing_Data_Analyzer_demo.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Owner\Desktop\Typing Project\Process_ANOVA_data" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -109,8 +356,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Typing_Data_Aanalyzer" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.Typing_Data_Analyzer_test">
+    <configuration name="Typing_Data_Analyzer_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Typing Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -122,7 +369,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Typing_Data_Aanalyzer.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Typing_Data_Analyzer_demo.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -131,9 +378,104 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Typing_Data_Analyzer_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Typing Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Typing_Data_Analyzer_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="language_model_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Typing Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/language_model_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="language_model_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Typing Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/language_model_train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="touch_model_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Typing Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/touch_model_train.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.Typing_Data_Analyzer_test" />
+      <item itemvalue="Python.language_model_train" />
+      <item itemvalue="Python.language_model_test" />
+      <item itemvalue="Python.touch_model_train" />
+      <item itemvalue="Python.Typing_Data_Analyzer_demo" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Typing_Data_Aanalyzer" />
+        <item itemvalue="Python.Typing_Data_Analyzer_test" />
+        <item itemvalue="Python.touch_model_train" />
+        <item itemvalue="Python.language_model_test" />
+        <item itemvalue="Python.Typing_Data_Analyzer_demo" />
+        <item itemvalue="Python.language_model_train" />
       </list>
     </recent_temporary>
   </component>
@@ -152,13 +494,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.09325606" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989154" visible="true" weight="0.14278187" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" sideWeight="0.5010846" side_tool="true" weight="0.15015806" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.4143167" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3546638" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -166,7 +509,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -176,14 +519,66 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Typing_Data_Aanalyzer.py">
+    <entry file="file://$PROJECT_DIR$/CSC428_A2_format_data.py" />
+    <entry file="file://$PROJECT_DIR$/Process_ANOVA_data/P1_F1L2F2L3F3L2_POINT_data__0.txt" />
+    <entry file="file://$PROJECT_DIR$/Process_ANOVA_data/P1_F1L2F2L2F3L3_POINT_data__0.txt" />
+    <entry file="file://$PROJECT_DIR$/Process_ANOVA_data/CSC428_A2_format_data.py" />
+    <entry file="file://$PROJECT_DIR$/keyboard_screen_shot.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/walking_character_pattern/kneser_ney.py" />
+    <entry file="file://$PROJECT_DIR$/Typing_Data_Analyzer_demo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="5865">
+          <caret line="356" selection-start-line="356" selection-end-line="356" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <marker date="1604610059963" expanded="true" signature="124:149" ph="..." />
-            <marker date="1604610059963" expanded="true" signature="2201:2206" ph="..." />
+            <marker date="1606339933863" expanded="true" signature="1041:1043" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Typing_Data_Analyzer_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8789">
+          <caret line="528" column="75" selection-start-line="528" selection-start-column="75" selection-end-line="528" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1607622369203" expanded="true" signature="15609:15612" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language_model_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/touch_model_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4318">
+          <caret line="264" selection-start-line="264" selection-end-line="264" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language_model_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/moving_average.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="52" lean-forward="true" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
