@@ -198,7 +198,7 @@ def get_touch_data(df_touch_time,df_touch,start_t, end_t):
 def build_model_and_generate_viz(posture):
     char_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
                  'u', 'v', 'w', 'x', 'y', 'z', ' ']
-    char_dict = create_touch_data_dict("all_" + posture + "_data")
+    char_dict = create_touch_data_dict("Eric_sitting_data_3")
     for char in char_list:
         show_char_pattern(char, char_dict, posture)
 
@@ -265,16 +265,22 @@ def construct_gaussian_models(char_dict,posture):
             lambda_ = np.sqrt(lambda_)
 
             # plot the ellipse on the image
-            # ax = plt.gca()
-            #
-            # plt.plot(np.mean(x), np.mean(y), ".", markersize=1, color='red')
-            #
-            # ax.add_patch(Ellipse(xy=(np.mean(x), np.mean(y)),
-            #                      width=lambda_[0] * 2 * 2, height=lambda_[1] * 2 * 2,
-            #                      linewidth=1,
-            #                      facecolor='none',
-            #                      edgecolor='red',
-            #                      angle=np.rad2deg(np.arccos(v[0, 0]))))
+            ax = plt.gca()
+
+            plt.plot(np.mean(x), np.mean(y), ".", markersize=1, color='red')
+
+            first_v = v[:,0]
+            slope = first_v[1]/first_v[0]
+
+            ax.add_patch(Ellipse(xy=(np.mean(x), np.mean(y)),
+                                 width=lambda_[0] * 2 * 2, height=lambda_[1] * 2 * 2,
+                                 linewidth=1,
+                                 facecolor='none',
+                                 edgecolor='red',
+                                 angle=np.rad2deg(np.arctan(slope))))
+            # print("char: " + char)
+            # print(lambda_)
+            # print(v)
 
             # save the model parameter in a dictionary
             model_dict[char] = {}
@@ -284,7 +290,7 @@ def construct_gaussian_models(char_dict,posture):
 
             print("Generated plot for " + char)
     # plt.scatter(x, y)
-    # plt.savefig(posture + '_character_pattern/' + posture + '_2D_Gauss.png', dpi=200)
+    plt.savefig(posture + '_character_pattern/' + posture + '_2D_Gauss.png', dpi=200)
     return model_dict
 
 
@@ -388,5 +394,5 @@ if __name__ == '__main__':
     # print(p)
 
     # this is for demo
-    # sitting_models = build_model_and_generate_viz("sitting")
-    interactive_demo()
+    sitting_models = build_model_and_generate_viz("sitting")
+    # interactive_demo()

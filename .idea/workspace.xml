@@ -5,117 +5,473 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6ce6e670-1d4b-4755-8dba-1fcc67eb4ab6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Typing_Data_Analyzer_demo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Typing_Data_Analyzer_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/language_model_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/language_model_train.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/touch_model_train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/Typing Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Typing Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Bayes_regression_model_train.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/motion_viz.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utility_funcs.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_I hate baking pies_05-11-2020_125704_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_I like baroque and classical music_05-11-2020_130022_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_I listen to the tape everyday_05-11-2020_125821_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_I spilled coffee on the carpet_05-11-2020_130010_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_I want to hold your hand_05-11-2020_125723_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_a coupon for a free sample_05-11-2020_125639_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_a glance in the right direction_05-11-2020_125935_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_a good response to the question_05-11-2020_125839_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_an occasional taste of chocolate_05-11-2020_125750_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_apartments are too expensive_05-11-2020_125508_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_are you sure you want this_05-11-2020_125846_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_be persistent to win a strike_05-11-2020_125355_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_do a good deed to someone_05-11-2020_125952_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_do not lie in court or else_05-11-2020_125918_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_every apple from every tree_05-11-2020_125618_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_everyone wants to win the lottery_05-11-2020_125858_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_her majesty visited our country_05-11-2020_130001_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_information super highway_05-11-2020_125739_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_interactions between men and women_05-11-2020_125829_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_interesting observation was made_05-11-2020_125808_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_it is very windy today_05-11-2020_125813_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_join us on the patio_05-11-2020_125542_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_just like it says on the can_05-11-2020_125537_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_knee bone is connected to the thigh bone_05-11-2020_130049_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_my favorite web browser_05-11-2020_125732_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_nobody cares anymore_05-11-2020_125644_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_olympic athletes use drugs_05-11-2020_125410_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_only an idiot would lie in court_05-11-2020_125716_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_parking tickets can be challenged_05-11-2020_125419_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_please follow the guidelines_05-11-2020_125607_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_reading week is just about here_05-11-2020_125516_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_rectangular objects have four sides_05-11-2020_125530_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_so you think you deserve a raise_05-11-2020_125442_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_space is a high priority_05-11-2020_125402_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_stay away from strangers_05-11-2020_125624_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_that is a very odd question_05-11-2020_125943_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_the accident scene is a shrine for fans_05-11-2020_130033_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_the early bird gets the worm_05-11-2020_125550_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_the rationale behind the decision_05-11-2020_125425_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_the winner of the race_05-11-2020_125521_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_they love to yap about nothing_05-11-2020_125500_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_they might find your comment offensive_05-11-2020_125908_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_this leather jacket is too warm_05-11-2020_125927_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_traveling to conferences is fun_05-11-2020_125452_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_try to enjoy your maternity leave_05-11-2020_125800_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_victims deserve more redress_05-11-2020_125559_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_we have enough witnesses_05-11-2020_125651_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_we went grocery shopping_05-11-2020_125433_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_win first prize in the contest_05-11-2020_125632_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_sitting/Eric_Sitting_wishful thinking is fine_05-11-2020_125657_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_I agree with you_05-11-2020_060300_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_I am going to a music lesson_05-11-2020_060159_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_I am wearing a tie and a jacket_05-11-2020_060323_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_I can see the rings on Saturn_05-11-2020_060238_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_I took the rover from the shop_05-11-2020_060315_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_Valium in the economy size_05-11-2020_060332_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_a problem with the engine_05-11-2020_060824_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_all good boys deserve fudge_05-11-2020_060710_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_are you talking to me_05-11-2020_060354_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_call for more details_05-11-2020_060607_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_can I skate with sister today_05-11-2020_060649_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_circumstances are unacceptable_05-11-2020_060527_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_come and see our new car_05-11-2020_060434_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_did you have a good time_05-11-2020_060509_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_do not drink too much_05-11-2020_060518_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_do not squander your time_05-11-2020_060454_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_elections bring out the best_05-11-2020_060757_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_fish are jumping_05-11-2020_060748_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_goldilocks and the three bears_05-11-2020_060428_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_great disturbance in the force_05-11-2020_060832_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_have a good weekend_05-11-2020_060337_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_he is just like everyone else_05-11-2020_060443_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_he is still on our team_05-11-2020_060551_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_mom made her a turtleneck_05-11-2020_060725_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_my bank account is overdrawn_05-11-2020_060619_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_my favorite place to visit_05-11-2020_060817_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_my favorite web browser_05-11-2020_060501_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_my preferred treat is chocolate_05-11-2020_060347_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_my watch fell in the water_05-11-2020_060743_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_never too rich and never too thin_05-11-2020_060734_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_popularity is desired by all_05-11-2020_060411_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_prayer in schools offends some_05-11-2020_060215_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_prevailing wind from the east_05-11-2020_060559_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_round robin scheduling_05-11-2020_060206_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_space is a high priority_05-11-2020_060307_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the assignment is due today_05-11-2020_060808_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the cotton is high_05-11-2020_060612_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the facts get in the way_05-11-2020_060542_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the force is with you_05-11-2020_060802_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the laser printer is jammed_05-11-2020_060255_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the power of denial_05-11-2020_060221_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the store will close at ten_05-11-2020_060535_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_the world is a stage_05-11-2020_060359_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_video camera with a zoom lens_05-11-2020_060658_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_we are subjects and must obey_05-11-2020_060628_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_we run the risk of failure_05-11-2020_060246_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_wear a crown with many jewels_05-11-2020_060419_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_what a monkey sees a monkey will do_05-11-2020_060641_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_yes you are very smart_05-11-2020_060716_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Eric_walking/Eric_walking_you are not a jedi yet_05-11-2020_060228_.xls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Typing_Data_Aanalyzer.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Typing_data_test/Eric_Sitting_breathing is difficult.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TM.pickle" beforeDir="false" afterPath="$PROJECT_DIR$/TM.pickle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Typing_Data_Analyzer_demo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Typing_Data_Analyzer_demo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Typing_Data_Analyzer_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/Typing_Data_Analyzer_test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_testing2/eric_sitting_I am wearing a tie and a jacket_11-12-2020_031836_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_testing2/eric_sitting_I watched blazing saddles_11-12-2020_031802_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_testing2/eric_sitting_a steep learning curve in riding a unicycle_11-12-2020_031903_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_testing2/eric_sitting_he is just like everyone else_11-12-2020_031820_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_testing2/eric_sitting_irregular verbs are the hardest to learn_11-12-2020_031754_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_testing2/eric_sitting_it is very windy today_11-12-2020_031743_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_testing2/eric_sitting_my favourite sport is racketball_11-12-2020_031813_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_testing2/eric_sitting_the first time he tried to swim_11-12-2020_031828_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_testing2/eric_sitting_these barracks are big enough_11-12-2020_031737_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_testing2/eric_sitting_why do you ask silly questions_11-12-2020_031846_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_Valium in the economy size_05-11-2020_062129_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_a quarter of a century_05-11-2020_062342_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_all good boys deserve fudge_05-11-2020_062539_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_an offer you cannot refuse_05-11-2020_062935_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_beware the ides of March_05-11-2020_062915_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_breathing is difficult_05-11-2020_062631_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_but the levee was dry_05-11-2020_062423_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_call for more details_05-11-2020_062610_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_can I skate with sister today_05-11-2020_062752_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_circumstances are unacceptable_05-11-2020_062659_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_come and see our new car_05-11-2020_062945_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_coming up with killer sound bites_05-11-2020_062144_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_do not drink too much_05-11-2020_062505_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_do not say anything_05-11-2020_062600_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_drove my chevy to the levee_05-11-2020_062405_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_elections bring out the best_05-11-2020_062257_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_neither a borrower nor a lender be_05-11-2020_062902_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_never too rich and never too thin_05-11-2020_062438_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_please provide your date of birth_05-11-2020_062848_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_popularity is desired by all_05-11-2020_062834_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_question that must be answered_05-11-2020_062823_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_soon we will return from the city_05-11-2020_062811_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_the assignment is due today_05-11-2020_062734_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_the dow jones index has risen_05-11-2020_062622_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_the facts get in the way_05-11-2020_062954_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_the king sends you to the tower_05-11-2020_062710_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_the music is better than it sounds_05-11-2020_062926_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_the opposing team is over there_05-11-2020_062103_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_the world is a stage_05-11-2020_062414_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_three two one zero blast off_05-11-2020_062323_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_time to go shopping_05-11-2020_062331_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_video camera with a zoom lens_05-11-2020_062450_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_watch out for low flying objects_05-11-2020_062158_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_yes you are very smart_05-11-2020_062551_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Chris _sitting_you are not a jedi yet_05-11-2020_062220_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_a coupon for a free sample_06-11-2020_043131_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_a yard is almost as long as a meter_06-11-2020_042622_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_all together in one big pile_06-11-2020_042959_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_an airport is a very busy place_06-11-2020_042542_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_bank transaction was not registered_06-11-2020_042846_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_be discreet about your meeting_06-11-2020_042655_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_beautiful paintings in the gallery_06-11-2020_042747_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_our fax number has changed_06-11-2020_042806_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_prayer in schools offends some_06-11-2020_042714_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_protect your environment_06-11-2020_042414_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_questioning the wisdom of the courts_06-11-2020_042425_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_sad to hear that news_06-11-2020_043038_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_salesmen must make their monthly quota_06-11-2020_042827_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_sing the gospel and the blues_06-11-2020_042550_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_staying up all night is a bad idea_06-11-2020_042911_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_superman never wore a mask_06-11-2020_042449_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_that land is owned by the government_06-11-2020_042634_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_that referendum asked a silly question_06-11-2020_042646_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_the cotton is high_06-11-2020_042852_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_the laser printer is jammed_06-11-2020_042816_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_the music is better than it sounds_06-11-2020_042341_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_the picket line gives me the chills_06-11-2020_043057_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_the proprietor was unavailable_06-11-2020_043117_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_the stock exchange dipped_06-11-2020_042932_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_the treasurer must balance her books_06-11-2020_043031_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_the voters turfed him out_06-11-2020_043011_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_this is a very good idea_06-11-2020_043124_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_traveling requires a lot of fuel_06-11-2020_042922_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_traveling to conferences is fun_06-11-2020_042518_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_universities are too expensive_06-11-2020_042404_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_we accept personal checks_06-11-2020_042950_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_what goes up must come down_06-11-2020_042611_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_where did you get such a silly idea_06-11-2020_043107_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_win first prize in the contest_06-11-2020_042836_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Elise_sitting_you have my sympathy_06-11-2020_042441_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_I hate baking pies_05-11-2020_125704_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_I like baroque and classical music_05-11-2020_130022_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_I listen to the tape everyday_05-11-2020_125821_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_I spilled coffee on the carpet_05-11-2020_130010_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_I want to hold your hand_05-11-2020_125723_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_a coupon for a free sample_05-11-2020_125639_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_a glance in the right direction_05-11-2020_125935_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_a good response to the question_05-11-2020_125839_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_an occasional taste of chocolate_05-11-2020_125750_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_apartments are too expensive_05-11-2020_125508_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_are you sure you want this_05-11-2020_125846_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_be persistent to win a strike_05-11-2020_125355_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_do a good deed to someone_05-11-2020_125952_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_do not lie in court or else_05-11-2020_125918_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_every apple from every tree_05-11-2020_125618_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_everyone wants to win the lottery_05-11-2020_125858_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_her majesty visited our country_05-11-2020_130001_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_information super highway_05-11-2020_125739_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_interactions between men and women_05-11-2020_125829_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_interesting observation was made_05-11-2020_125808_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_it is very windy today_05-11-2020_125813_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_join us on the patio_05-11-2020_125542_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_just like it says on the can_05-11-2020_125537_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_knee bone is connected to the thigh bone_05-11-2020_130049_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_my favorite web browser_05-11-2020_125732_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_nobody cares anymore_05-11-2020_125644_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_olympic athletes use drugs_05-11-2020_125410_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_only an idiot would lie in court_05-11-2020_125716_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_parking tickets can be challenged_05-11-2020_125419_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_please follow the guidelines_05-11-2020_125607_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_reading week is just about here_05-11-2020_125516_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_rectangular objects have four sides_05-11-2020_125530_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_so you think you deserve a raise_05-11-2020_125442_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_win first prize in the contest_05-11-2020_125632_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/Eric_Sitting_wishful thinking is fine_05-11-2020_125657_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_I do not fully agree with you_07-11-2020_050803_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_I hate baking pies_07-11-2020_051118_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_gun powder must be handled with care_07-11-2020_050635_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_he called seven times_07-11-2020_050626_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_he is just like everyone else_07-11-2020_050911_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_her majesty visited our country_07-11-2020_051149_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_important for political parties_07-11-2020_050719_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_interactions between men and women_07-11-2020_050951_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_irregular verbs are the hardest to learn_07-11-2020_050611_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_it is difficult to concentrate_07-11-2020_050708_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_it is very windy today_07-11-2020_050725_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_limited warranty of two years_07-11-2020_051214_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_longer than a football field_07-11-2020_051048_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_machinery is too complicated_07-11-2020_050619_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_mom made her a turtleneck_07-11-2020_051134_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_motivational seminars make me sick_07-11-2020_050811_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_my bike has a flat tire_07-11-2020_050747_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_no exchange without a bill_07-11-2020_050651_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_not quite so smart as you think_07-11-2020_051013_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_play it again Sam_07-11-2020_051053_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_public transit is much faster_07-11-2020_051157_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_relations are very strained_07-11-2020_050700_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_see you later alligator_07-11-2020_050740_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_space is a high priority_07-11-2020_050734_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_the algorithm is too complicated_07-11-2020_050932_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_the bathroom is good for reading_07-11-2020_050825_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_the biggest hamburger I have ever seen_07-11-2020_051104_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_the king sends you to the tower_07-11-2020_050855_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_the price of gas is high_07-11-2020_050925_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_the registration period is over_07-11-2020_051022_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_the trains are always late_07-11-2020_050818_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_these barracks are big enough_07-11-2020_050918_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_this leather jacket is too warm_07-11-2020_050543_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_time to go shopping_07-11-2020_050957_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_sitting_data_training/LiZhen_sitting_wear a crown with many jewels_07-11-2020_050941_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Chris_walking_I am allergic to bees and peanuts_05-11-2020_055834_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Chris_walking_I can see the rings on Saturn_05-11-2020_055848_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Chris_walking_I took the rover from the shop_05-11-2020_055812_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Chris_walking_do not squander your time_05-11-2020_055414_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Chris_walking_double double toil and trouble_05-11-2020_055315_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Chris_walking_elections bring out the best_05-11-2020_055558_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Chris_walking_elephants are afraid of mice_05-11-2020_055739_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Chris_walking_fish are jumping_05-11-2020_055443_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Chris_walking_for your information only_05-11-2020_055902_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Chris_walking_great disturbance in the force_05-11-2020_055036_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Chris_walking_hair gel is very greasy_05-11-2020_055020_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Chris_walking_have a good weekend_05-11-2020_055716_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Chris_walking_he is just like everyone else_05-11-2020_055047_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Chris_walking_head shoulders knees and toes_05-11-2020_055751_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Chris_walking_information super highway_05-11-2020_055205_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Elise_walking_I am wearing a tie and a jacket_06-11-2020_043833_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Elise_walking_I listen to the tape everyday_06-11-2020_043904_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Elise_walking_I skimmed through your proposal_06-11-2020_043525_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Elise_walking_always cover all the bases_06-11-2020_043621_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Elise_walking_beautiful paintings in the gallery_06-11-2020_043823_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Elise_walking_did you see that spectacular explosion_06-11-2020_043811_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Elise_walking_do a good deed to someone_06-11-2020_043356_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Elise_walking_do not worry about this_06-11-2020_043508_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Elise_walking_fine but only in moderation_06-11-2020_043849_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Elise_walking_freud wrote of the ego_06-11-2020_043455_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Elise_walking_get aboard the ship is leaving_06-11-2020_043642_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Elise_walking_get your priorities in order_06-11-2020_043325_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Elise_walking_gun powder must be handled with care_06-11-2020_043915_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Elise_walking_hair gel is very greasy_06-11-2020_044009_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Elise_walking_information super highway_06-11-2020_043609_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Eric_walking_I agree with you_05-11-2020_060300_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Eric_walking_I am going to a music lesson_05-11-2020_060159_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Eric_walking_I am wearing a tie and a jacket_05-11-2020_060323_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Eric_walking_I can see the rings on Saturn_05-11-2020_060238_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Eric_walking_I took the rover from the shop_05-11-2020_060315_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Eric_walking_he is just like everyone else_05-11-2020_060443_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Eric_walking_he is still on our team_05-11-2020_060551_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Eric_walking_mom made her a turtleneck_05-11-2020_060725_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Eric_walking_my bank account is overdrawn_05-11-2020_060619_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Eric_walking_my favorite place to visit_05-11-2020_060817_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Eric_walking_my favorite web browser_05-11-2020_060501_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Eric_walking_my preferred treat is chocolate_05-11-2020_060347_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Eric_walking_my watch fell in the water_05-11-2020_060743_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Eric_walking_never too rich and never too thin_05-11-2020_060734_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Eric_walking_popularity is desired by all_05-11-2020_060411_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Lizhen_walking_Valium in the economy size_07-11-2020_051526_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Lizhen_walking_safe to walk the streets in the evening_07-11-2020_051817_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Lizhen_walking_soon we will return from the city_07-11-2020_051440_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Lizhen_walking_the chamber makes important decisions_07-11-2020_051928_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Lizhen_walking_the children are playing_07-11-2020_052024_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Lizhen_walking_the collapse of the Roman empire_07-11-2020_052111_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Lizhen_walking_the dog buried the bone_07-11-2020_052052_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Lizhen_walking_the sum of the parts_07-11-2020_051656_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Lizhen_walking_the ventilation system is broken_07-11-2020_051718_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Lizhen_walking_they watched the entire movie_07-11-2020_051852_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Lizhen_walking_this leather jacket is too warm_07-11-2020_052119_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Lizhen_walking_this watch is too expensive_07-11-2020_051905_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Lizhen_walking_watch out for low flying objects_07-11-2020_051626_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Lizhen_walking_we are subjects and must obey_07-11-2020_051736_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_testing/Lizhen_walking_we drive on parkways_07-11-2020_051510_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_all work and no play_05-11-2020_055057_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_an offer you cannot refuse_05-11-2020_055120_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_come and see our new car_05-11-2020_055655_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_coming up with killer sound bites_05-11-2020_055245_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_do not drink too much_05-11-2020_055800_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_just in time for the party_05-11-2020_055707_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_love means many things_05-11-2020_055529_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_mom made her a turtleneck_05-11-2020_055352_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_movie about a nutty professor_05-11-2020_055543_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_my favorite place to visit_05-11-2020_055634_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_my favorite subject is psychology_05-11-2020_055006_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_my favorite web browser_05-11-2020_054950_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_my watch fell in the water_05-11-2020_055646_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_never too rich and never too thin_05-11-2020_055154_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_one heck of a question_05-11-2020_055436_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_play it again Sam_05-11-2020_055128_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_please provide your date of birth_05-11-2020_055300_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_prevailing wind from the east_05-11-2020_055328_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_soon we will return from the city_05-11-2020_055507_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_the assignment is due today_05-11-2020_055340_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_the facts get in the way_05-11-2020_055139_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_the laser printer is jammed_05-11-2020_055109_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_the living is easy_05-11-2020_055819_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_the music is better than it sounds_05-11-2020_055918_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_the quick brown fox jumped_05-11-2020_055623_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_the store will close at ten_05-11-2020_055454_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_three two one zero blast off_05-11-2020_054938_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_watch out for low flying objects_05-11-2020_054927_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_we are having spaghetti_05-11-2020_055216_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_we are subjects and must obey_05-11-2020_055427_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_we run the risk of failure_05-11-2020_055228_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_we went grocery shopping_05-11-2020_055609_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_yes you are very smart_05-11-2020_055402_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_you are a wonderful example_05-11-2020_055727_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Chris_walking_you are not a jedi yet_05-11-2020_055518_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_a psychiatrist will help you_06-11-2020_043727_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_interesting observation was made_06-11-2020_043632_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_just like it says on the can_06-11-2020_043536_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_medieval times were very hard_06-11-2020_043953_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_my bank account is overdrawn_06-11-2020_043934_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_my dog sheds his hair_06-11-2020_043719_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_no kissing in the library_06-11-2020_043517_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_olympic athletes use drugs_06-11-2020_043601_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_pay off a mortgage for a house_06-11-2020_043405_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_please try to be home before midnight_06-11-2020_043752_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_raindrops keep falling on my head_06-11-2020_043447_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_rejection letters are discouraging_06-11-2020_043422_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_sent this by registered mail_06-11-2020_043430_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_shall we play a round of cards_06-11-2020_043502_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_sit at the front of the bus_06-11-2020_043342_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_that sticker needs to be validated_06-11-2020_043926_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_the accident scene is a shrine for fans_06-11-2020_043334_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_the chamber makes important decisions_06-11-2020_043944_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_the collapse of the Roman empire_06-11-2020_043300_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_the fire raged for an entire month_06-11-2020_043553_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_the imagination of the nation_06-11-2020_043651_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_the most beautiful sunset_06-11-2020_043412_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_the presidential suite is very busy_06-11-2020_043316_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_the trains are always late_06-11-2020_043306_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_this mission statement is baloney_06-11-2020_043801_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_this system of taxation_06-11-2020_043735_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_universally understood to be wrong_06-11-2020_044002_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_universities are too expensive_06-11-2020_043713_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_vanilla flavored ice cream_06-11-2020_043842_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_very reluctant to enter_06-11-2020_043742_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_we are subjects and must obey_06-11-2020_043857_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_we must redouble our efforts_06-11-2020_043349_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_we went grocery shopping_06-11-2020_043438_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_where did you get that tie_06-11-2020_043544_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Elise_walking_zero in on the facts_06-11-2020_043615_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_Valium in the economy size_05-11-2020_060332_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_a problem with the engine_05-11-2020_060824_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_all good boys deserve fudge_05-11-2020_060710_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_are you talking to me_05-11-2020_060354_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_call for more details_05-11-2020_060607_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_can I skate with sister today_05-11-2020_060649_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_circumstances are unacceptable_05-11-2020_060527_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_come and see our new car_05-11-2020_060434_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_did you have a good time_05-11-2020_060509_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_do not drink too much_05-11-2020_060518_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_do not squander your time_05-11-2020_060454_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_elections bring out the best_05-11-2020_060757_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_fish are jumping_05-11-2020_060748_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_goldilocks and the three bears_05-11-2020_060428_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_great disturbance in the force_05-11-2020_060832_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_have a good weekend_05-11-2020_060337_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_prayer in schools offends some_05-11-2020_060215_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_prevailing wind from the east_05-11-2020_060559_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_round robin scheduling_05-11-2020_060206_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_space is a high priority_05-11-2020_060307_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_the assignment is due today_05-11-2020_060808_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_the cotton is high_05-11-2020_060612_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_the facts get in the way_05-11-2020_060542_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_the force is with you_05-11-2020_060802_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_the laser printer is jammed_05-11-2020_060255_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_the power of denial_05-11-2020_060221_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_the store will close at ten_05-11-2020_060535_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_the world is a stage_05-11-2020_060359_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_video camera with a zoom lens_05-11-2020_060658_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_we are subjects and must obey_05-11-2020_060628_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_we run the risk of failure_05-11-2020_060246_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_wear a crown with many jewels_05-11-2020_060419_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_what a monkey sees a monkey will do_05-11-2020_060641_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_yes you are very smart_05-11-2020_060716_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Eric_walking_you are not a jedi yet_05-11-2020_060228_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_I can still feel your presence_07-11-2020_051432_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_I just cannot figure this out_07-11-2020_051825_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_I want to hold your hand_07-11-2020_051742_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_a most ridiculous thing_07-11-2020_052045_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_an inefficient way to heat a house_07-11-2020_051707_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_are you talking to me_07-11-2020_051533_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_bank transaction was not registered_07-11-2020_051835_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_but the levee was dry_07-11-2020_051801_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_circumstances are unacceptable_07-11-2020_051504_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_come and see our new car_07-11-2020_051446_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_communicate through email_07-11-2020_051748_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_did you have a good time_07-11-2020_051519_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_did you see that spectacular explosion_07-11-2020_051945_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_dinosaurs have been extinct for ages_07-11-2020_051553_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_do not say anything_07-11-2020_051934_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_drugs should be avoided_07-11-2020_051858_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_flashing red light means stop_07-11-2020_051618_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_for murder you get a long prison sentence_07-11-2020_051919_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_go out for some pizza and beer_07-11-2020_051726_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_he played a pimp in that movie_07-11-2020_052000_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_if at first you do not succeed_07-11-2020_052010_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_it is very windy today_07-11-2020_052018_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_jumping right out of the water_07-11-2020_051755_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_longer than a football field_07-11-2020_051646_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_meet tomorrow in the lavatory_07-11-2020_051455_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_my bike has a flat tire_07-11-2020_051808_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_my watch fell in the water_07-11-2020_051541_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_no more war no more bloodshed_07-11-2020_052034_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_physics and chemistry are hard_07-11-2020_051845_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_play it again Sam_07-11-2020_052039_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_please keep this confidential_07-11-2020_051601_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_prayer in schools offends some_07-11-2020_052101_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_question that must be answered_07-11-2020_051637_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_reading week is just about here_07-11-2020_051609_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/all_walking_data_training/Lizhen_walking_round robin scheduling_07-11-2020_051951_.xls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/motion_model_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/motion_model_train.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/ _169_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/ _505_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/ _514_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/ _733_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/ _841_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/a_229_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/a_323_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/a_329_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/b_50_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/b_66_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/b_68_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/b_70_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/c_129_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/c_91_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/c_92_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/d_100_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/d_138_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/d_144_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/d_145_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/d_99_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/e_417_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/e_418_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/e_566_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/e_584_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/e_591_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/f_51_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/f_79_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/f_81_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/f_82_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/g_100_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/g_102_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/g_67_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/g_98_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/h_121_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/h_123_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/h_167_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/h_171_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/h_176_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/i_220_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/i_221_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/i_291_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/i_312_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/i_319_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/j_13_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/j_24_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/k_30_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/k_31_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/k_38_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/k_39_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/l_110_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/l_147_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/l_150_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/l_151_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/m_115_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/m_117_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/m_76_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/m_77_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/n_193_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/n_195_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/n_261_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/n_267_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/n_268_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/o_251_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/o_323_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/o_352_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/o_356_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/p_59_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/p_60_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/p_85_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/p_88_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/p_90_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/q_12_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/q_9_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/r_208_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/r_286_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/r_299_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/r_302_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/s_204_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/s_208_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/s_281_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/s_294_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/s_296_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/sitting_2D_Gauss.png" beforeDir="false" afterPath="$PROJECT_DIR$/sitting_character_pattern/sitting_2D_Gauss.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/t_297_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/t_403_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/t_415_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/t_420_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/u_100_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/u_134_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/u_142_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/u_143_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/u_99_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/v_42_pattern.png" beforeDir="false" afterPath="$PROJECT_DIR$/sitting_character_pattern/v_42_pattern.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/v_64_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/v_65_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/v_67_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/w_52_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/w_53_pattern.png" beforeDir="false" afterPath="$PROJECT_DIR$/sitting_character_pattern/w_53_pattern.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/w_72_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/w_75_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/w_77_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/x_5_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/x_7_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/y_125_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/y_126_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/y_128_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/y_83_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sitting_character_pattern/z_5_pattern.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/touch_model_train.py" beforeDir="false" afterPath="$PROJECT_DIR$/touch_model_train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,34 +483,34 @@
     <session id="-51754656">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="23" />
-          <entry key="project.open.time.0" value="6" />
+          <entry key="project.closed" value="33" />
+          <entry key="project.open.time.0" value="8" />
           <entry key="project.open.time.1" value="2" />
-          <entry key="project.open.time.4" value="4" />
-          <entry key="project.open.time.5" value="10" />
-          <entry key="project.open.time.6" value="2" />
-          <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="25" />
+          <entry key="project.open.time.4" value="5" />
+          <entry key="project.open.time.5" value="13" />
+          <entry key="project.open.time.6" value="6" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.opened" value="36" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="Python Console" value="13" />
-          <entry key="dummy" value="18" />
-          <entry key="py" value="12913" />
+          <entry key="Python Console" value="381" />
+          <entry key="dummy" value="24" />
+          <entry key="py" value="21415" />
           <entry key="txt" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="24" />
-          <entry key="Python" value="12926" />
+          <entry key="PLAIN_TEXT" value="30" />
+          <entry key="Python" value="21796" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="jpg" value="2" />
-          <entry key="py" value="18" />
+          <entry key="py" value="28" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
@@ -162,7 +518,7 @@
         <counts>
           <entry key="Image" value="2" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="18" />
+          <entry key="Python" value="28" />
         </counts>
       </usages-collector>
     </session>
@@ -173,50 +529,39 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Typing_Data_Analyzer_demo.py">
+        <entry file="file://$PROJECT_DIR$/utility_funcs.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5865">
-              <caret line="356" selection-start-line="356" selection-end-line="356" />
+            <state relative-caret-position="4675">
+              <caret line="282" selection-start-line="282" selection-end-line="282" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1606339933863" expanded="true" signature="1041:1043" ph="..." />
+                <marker date="1609313579932" expanded="true" signature="9462:9466" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Typing_Data_Analyzer_test.py">
+        <entry file="file://$PROJECT_DIR$/Typing_Data_Analyzer_demo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8789">
-              <caret line="528" column="75" selection-start-line="528" selection-start-column="75" selection-end-line="528" selection-end-column="75" />
+            <state relative-caret-position="4437">
+              <caret line="272" column="41" selection-start-line="272" selection-start-column="41" selection-end-line="272" selection-end-column="41" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <marker date="1607622369203" expanded="true" signature="15609:15612" ph="..." />
+                <marker date="1608226829991" expanded="true" signature="1041:1043" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/moving_average.py">
+        <entry file="file://$PROJECT_DIR$/Typing_Data_Analyzer_test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="52" lean-forward="true" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+            <state relative-caret-position="-333">
+              <caret line="243" column="79" selection-start-line="243" selection-start-column="79" selection-end-line="243" selection-end-column="79" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/language_model_train.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="20" selection-start-line="20" selection-end-line="20" />
-              <folding>
-                <element signature="e#0#11#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
+                <marker date="1609312486718" expanded="true" signature="7864:7867" ph="..." />
               </folding>
             </state>
           </provider>
@@ -225,17 +570,24 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/touch_model_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4318">
-              <caret line="264" selection-start-line="264" selection-end-line="264" />
+            <state relative-caret-position="3774">
+              <caret line="230" column="49" selection-start-line="230" selection-start-column="49" selection-end-line="230" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/language_model_test.py">
+        <entry file="file://$PROJECT_DIR$/Bayes_regression_model_train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+            <state relative-caret-position="2992">
+              <caret line="181" column="15" selection-start-line="181" selection-start-column="15" selection-end-line="181" selection-end-column="15" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+                <marker date="1609313672988" expanded="true" signature="4248:4249" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -251,36 +603,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>create_touch_data</find>
-      <find>create</find>
-      <find>create_touch</find>
-      <find>touch_data</find>
-      <find>get_touch_data</find>
-      <find>100</find>
-      <find>get_touch</find>
-      <find>invalid</find>
-      <find>char_list</find>
-      <find>training</find>
-      <find>predict</find>
-      <find>true_co</find>
-      <find>generated</find>
-      <find>predict_char</find>
-      <find>glob</find>
-      <find>pred</find>
+      <find>sfname</find>
+      <find>item</find>
+      <find>build_model</find>
       <find>print</find>
-      <find>corrected</find>
-      <find>typed_</find>
-      <find>sitting</find>
-      <find>inte</find>
-      <find>context</find>
-      <find>pred_char</find>
-      <find>int_str</find>
-      <find>corre</find>
-      <find>correc</find>
-      <find>cor</find>
-      <find>revised</find>
-      <find>uncorrected</find>
-      <find>_corrected</find>
+      <find>plt</find>
+      <find>show</find>
+      <find>Touch_model</find>
+      <find>convert</find>
+      <find>== 'a'</find>
+      <find>for char</find>
+      <find>draw_center</find>
+      <find>build_model_and</find>
+      <find>predict_char_tm</find>
+      <find>get</find>
+      <find>model_name</find>
+      <find>get_touch_data</find>
+      <find>df_touch</find>
+      <find>.show</find>
+      <find>get_motion</find>
+      <find>get_motion_data</find>
+      <find>predict_char</find>
+      <find>build</find>
+      <find>get_touch</find>
+      <find>BLR_model</find>
+      <find>create</find>
+      <find>construct</find>
+      <find>print()</find>
+      <find>construct_motion</find>
+      <find>predict</find>
+      <find>get_mo</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -301,15 +653,21 @@
         <option value="$PROJECT_DIR$/language_model_test.py" />
         <option value="$PROJECT_DIR$/language_model_train.py" />
         <option value="$PROJECT_DIR$/Typing_Data_Analyzer_demo.py" />
+        <option value="$PROJECT_DIR$/Bayes_regression_model.py" />
+        <option value="$PROJECT_DIR$/motion_viz.py" />
+        <option value="$PROJECT_DIR$/motion_model_train.py" />
         <option value="$PROJECT_DIR$/touch_model_train.py" />
         <option value="$PROJECT_DIR$/Typing_Data_Analyzer_test.py" />
+        <option value="$PROJECT_DIR$/utility_funcs.py" />
+        <option value="$PROJECT_DIR$/Bayes_regression_model_train.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+    <option name="x" value="952" />
+    <option name="y" value="-8" />
+    <option name="width" value="976" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -357,7 +715,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.Typing_Data_Analyzer_test">
-    <configuration name="Typing_Data_Analyzer_demo" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Bayes_regression_model_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Typing Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -369,7 +727,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Typing_Data_Analyzer_demo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Bayes_regression_model_train.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -399,7 +757,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="language_model_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="motion_model_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Typing Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -411,7 +769,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/language_model_test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/motion_model_train.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -420,7 +778,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="language_model_train" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="motion_viz" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Typing Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -432,7 +790,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/language_model_train.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/motion_viz.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -464,18 +822,18 @@
     </configuration>
     <list>
       <item itemvalue="Python.Typing_Data_Analyzer_test" />
-      <item itemvalue="Python.language_model_train" />
-      <item itemvalue="Python.language_model_test" />
       <item itemvalue="Python.touch_model_train" />
-      <item itemvalue="Python.Typing_Data_Analyzer_demo" />
+      <item itemvalue="Python.motion_viz" />
+      <item itemvalue="Python.motion_model_train" />
+      <item itemvalue="Python.Bayes_regression_model_train" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.Typing_Data_Analyzer_test" />
+        <item itemvalue="Python.Bayes_regression_model_train" />
         <item itemvalue="Python.touch_model_train" />
-        <item itemvalue="Python.language_model_test" />
-        <item itemvalue="Python.Typing_Data_Analyzer_demo" />
-        <item itemvalue="Python.language_model_train" />
+        <item itemvalue="Python.motion_model_train" />
+        <item itemvalue="Python.motion_viz" />
       </list>
     </recent_temporary>
   </component>
@@ -492,16 +850,43 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989154" visible="true" weight="0.14278187" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4989154" visible="true" weight="0.1654373" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" sideWeight="0.5010846" side_tool="true" weight="0.15015806" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3546638" />
+      <window_info anchor="bottom" id="Debug" order="2" weight="0.3991323" />
+      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="5" weight="0.27874187" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.19956616" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.329718" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4989154" visible="true" weight="0.13435195" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" sideWeight="0.5010846" side_tool="true" weight="0.15015806" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26681128" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -513,7 +898,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-    </layout>
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -527,42 +912,10 @@
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/walking_character_pattern/kneser_ney.py" />
-    <entry file="file://$PROJECT_DIR$/Typing_Data_Analyzer_demo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5865">
-          <caret line="356" selection-start-line="356" selection-end-line="356" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1606339933863" expanded="true" signature="1041:1043" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Typing_Data_Analyzer_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8789">
-          <caret line="528" column="75" selection-start-line="528" selection-start-column="75" selection-end-line="528" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-            <marker date="1607622369203" expanded="true" signature="15609:15612" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/language_model_train.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/touch_model_train.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4318">
-          <caret line="264" selection-start-line="264" selection-end-line="264" />
         </state>
       </provider>
     </entry>
@@ -575,10 +928,89 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/moving_average.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="52" lean-forward="true" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+        <state relative-caret-position="459">
+          <caret line="42" selection-start-line="42" selection-end-line="44" selection-end-column="87" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Miniconda3/envs/smart_reminder/Lib/site-packages/pandas/core/indexes/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="2894" selection-start-line="2894" selection-end-line="2894" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Miniconda3/envs/smart_reminder/Lib/site-packages/sklearn/gaussian_process/_gpr.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="316" selection-start-line="316" selection-end-line="316" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/motion_viz.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="121" column="31" selection-start-line="121" selection-start-column="31" selection-end-line="121" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/motion_model_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="349">
+          <caret line="204" column="33" selection-start-line="204" selection-start-column="33" selection-end-line="204" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utility_funcs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4675">
+          <caret line="282" selection-start-line="282" selection-end-line="282" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+            <marker date="1609313579932" expanded="true" signature="9462:9466" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Typing_Data_Analyzer_demo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4437">
+          <caret line="272" column="41" selection-start-line="272" selection-start-column="41" selection-end-line="272" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+            <marker date="1608226829991" expanded="true" signature="1041:1043" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/touch_model_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3774">
+          <caret line="230" column="49" selection-start-line="230" selection-start-column="49" selection-end-line="230" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Bayes_regression_model_train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2992">
+          <caret line="181" column="15" selection-start-line="181" selection-start-column="15" selection-end-line="181" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+            <marker date="1609313672988" expanded="true" signature="4248:4249" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Typing_Data_Analyzer_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-333">
+          <caret line="243" column="79" selection-start-line="243" selection-start-column="79" selection-end-line="243" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+            <marker date="1609312486718" expanded="true" signature="7864:7867" ph="..." />
           </folding>
         </state>
       </provider>

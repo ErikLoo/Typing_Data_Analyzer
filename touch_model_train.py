@@ -7,8 +7,7 @@ import matplotlib.image as mpimg
 from matplotlib.patches import Ellipse
 import numpy as np
 import pickle
-from matplotlib.colors import LogNorm
-from sklearn import mixture
+
 
 class Touch_model:
     def __init__(self,model_para):
@@ -23,6 +22,11 @@ class Touch_model:
         """
         pos = np.array(pos)
         n = mu.shape[0]
+
+        # print(pos)
+        # print(mu)
+        # print(Sigma)
+
         Sigma_det = np.linalg.det(Sigma)
         Sigma_inv = np.linalg.inv(Sigma)
         N = np.sqrt((2 * np.pi) ** n * Sigma_det)
@@ -53,6 +57,12 @@ class Touch_model:
 
         mean = self.model_para[char]['mean']
         cov = self.model_para[char]['cov']
+
+        # print("touch model")
+        # print(coord)
+        # print(mean)
+        # print(cov)
+
         prob = self.multivariate_gaussian(coord, mean, cov)
         return prob
 
@@ -118,7 +128,7 @@ def create_touch_data_dict(folder_name):
                     end_t = df_time['end time'].iloc[i]
 
                     # this is something issue with the start_time variable. DO NOT USE it !
-                    start_t = end_t - 100
+                    # start_t = end_t - 100
 
                     coord_data = get_touch_data(df_touch['time'],df_touch,start_t,end_t)
                     # print(coord_data)
@@ -137,9 +147,9 @@ def create_touch_data_dict(folder_name):
                         Get rid of the data that are far out of range 1.5 times the height
                         '''
                         if char not in char_touch_dict.keys():
-                            char_touch_dict[char] = [coord_data]
+                            char_touch_dict[char] = [actual_coords]
                         else:
-                            char_touch_dict[char].append(coord_data)
+                            char_touch_dict[char].append(actual_coords)
 
             else:
                 # invalid correction operation
@@ -162,13 +172,17 @@ def get_touch_data(df_touch_time,df_touch,start_t, end_t):
     if len(coord_data)==0:
         print("start time: " + str(start_t) + " | end time: " + str(end_t))
 
-    return [coord_data[int(len(coord_data)/2)],coord_data[-1]]
+    # return [coord_data[int(len(coord_data)/2)],coord_data[-1]]
+    return [coord_data[0],coord_data[-1]]
+
 
 
 def build_model_and_generate_viz(f_name):
     char_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
                  'u', 'v', 'w', 'x', 'y', 'z', ' ']
     char_dict = create_touch_data_dict(f_name)
+
+    # print(char_dict['a'])
 
     return construct_gaussian_models(char_dict,None)
 
@@ -188,9 +202,19 @@ def construct_gaussian_models(char_dict,posture):
 
     for char in char_list:
         if char in char_dict.keys():
-            XY = convert_to_numpy(char_dict[char])
+            # XY = convert_to_numpy(char_dict[char])
+
+            XY = np.array(char_dict[char])
+
             x = XY[:, 0]
             y = XY[:, 1]
+
+            # if char == 'a':
+            #     print(XY)
+            #     print(x)
+            #     print(y)
+            #     #
+
             cov = np.cov(x, y)
             lambda_, v = np.linalg.eig(cov)
             lambda_ = np.sqrt(lambda_)
@@ -219,46 +243,27 @@ def construct_gaussian_models(char_dict,posture):
     return model_dict
 
 
-def convert_to_numpy(data):
-    '''
-    Only append the starting data
-    :param data:
-    :return:
-    '''
-    temp_data = []
-    for coord in data:
-        temp_data.append(coord[0])
-    final_data = np.array(temp_data)
-
-    return final_data
+# def convert_to_numpy(data):
+#     '''
+#     Only append the starting data
+#     :param data:
+#     :return:
+#     '''
+#     temp_data = []
+#     for coord in data:
+#         temp_data.append(coord[0])
+#     final_data = np.array(temp_data)
+#
+#     return final_data
 
 
 if __name__ == '__main__':
     # train the model
-    model_sitting = build_model_and_generate_viz("all_sitting_data_training")
+    model_sitting = build_model_and_generate_viz("all_walking_data_training")
     touch_model_sitting = Touch_model(model_sitting)
 
     f = open('TM.pickle', 'wb')
     pickle.dump(touch_model_sitting, f)
     f.close()
 
-    print("Touch model trained on sitting data saved to file")
-
-    model_walking = build_model_and_generate_viz("all_walking_data_training")
-    touch_model_walking = Touch_model(model_walking)
-
-    f = open('TM2.pickle', 'wb')
-    pickle.dump(touch_model_walking, f)
-    f.close()
-
-    print("Touch model trained on walking data saved to file")
-
-    model_comb = build_model_and_generate_viz("all_combined_data_training")
-    touch_model_comb = Touch_model(model_comb)
-
-    f = open('TM3.pickle', 'wb')
-    pickle.dump(touch_model_comb, f)
-    f.close()
-
-    print("Touch model trained on comb data saved to file")
 

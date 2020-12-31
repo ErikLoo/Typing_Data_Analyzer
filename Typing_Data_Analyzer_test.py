@@ -1,48 +1,8 @@
-import numpy as np
-import pandas as pd
-import glob
-import cv2
-import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
-from matplotlib.patches import Ellipse
-import numpy as np
-import pickle
+import warnings
+from utility_funcs import *
 from touch_model_train import Touch_model
-from matplotlib.colors import LogNorm
-from sklearn import mixture
-
-
-def true_coord():
-    true_dict = {
-        'a': [108,1660],
-        'b': [648,1825],
-        'c': [432,1825],
-        'd': [324,1660],
-        'e': [270,1495],
-        'f': [432,1660],
-        'g': [540,1660],
-        'h': [648,1660],
-        'i': [810,1495],
-        'j': [756,1660],
-        'k': [864,1660],
-        'l': [972,1660],
-        'm': [864,1825],
-        'n': [756,1825],
-        'o': [918,1495],
-        'p': [1026,1495],
-        'q': [54,1495],
-        'r': [378,1495],
-        's': [216,1660],
-        't': [486,1495],
-        'u': [702,1495],
-        'v': [540,1825],
-        'w': [162,1495],
-        'x': [324,1825],
-        'y': [594,1495],
-        'z': [216,1825],
-        ' ': [539,1988]}
-    return true_dict
-
+from motion_model_train import Motion_model
+from Bayes_regression_model_train import BLR_model
 
 # calcualte the letter-wise accuracy
 def text_entry_metric(folder_name):
@@ -116,8 +76,7 @@ def text_entry_metric(folder_name):
     print(" ")
 
 
-
-def text_entry_metric_corrected(folder_name,model_name):
+def text_entry_metric_corrected(folder_name,touch_model_name,motion_model_name,BLR_model_name):
 
     err_rate_list = []
     tlt_duration = 0
@@ -136,6 +95,10 @@ def text_entry_metric_corrected(folder_name,model_name):
 
         df_time = pd.read_excel(fname, sheet_name='input_time')
         df_touch = pd.read_excel(fname, sheet_name='touch_data')
+        df_accel = pd.read_excel(fname, sheet_name='accel_data')
+        df_gyro = pd.read_excel(fname, sheet_name='gyro_data')
+
+
 
 
         intend_char = df['intended character']
@@ -170,9 +133,11 @@ def text_entry_metric_corrected(folder_name,model_name):
                 # if end_t - start_t < 50:
                 #     start_t = end_t - 100
 
-                start_t = end_t - 100
+                # start_t = end_t - 100
 
                 coord_data = get_touch_data(df_touch['time'], df_touch, start_t, end_t)
+                motion_data = get_motion_data(df_accel, df_gyro, start_t - 100, start_t)
+
                 actual_coords = np.array(coord_data[0])
 
                 if char == 'Space':
@@ -182,8 +147,8 @@ def text_entry_metric_corrected(folder_name,model_name):
                     pred_char = ' '
                     tm_char = ' '
                 else:
-                    pred_char, highest_p = predict_char(actual_coords,t_model_str,model_name)
-                    # pred_char, highest_p = predict_char(actual_coords,typed_str,model_name)
+                    pred_char, highest_p = predict_char(actual_coords,t_model_str,motion_data,touch_model_name,motion_model_name,BLR_model_name)
+                    # pred_char, highest_p = predict_char(actual_coords,typed_str,touch_model_name)
 
                     tm_char, tm_p = predict_char_tm(actual_coords,typed_str)
 
@@ -208,6 +173,7 @@ def text_entry_metric_corrected(folder_name,model_name):
 
 
         INF = levenshteinDistance(int_str,correct_str)
+
         C = max(len(int_str),len(typed_str)) - INF
 
         err_rate = INF/(INF+C)
@@ -229,230 +195,26 @@ def text_entry_metric_corrected(folder_name,model_name):
         if int_str == typed_str == correct_str:
             pass
         else:
-            if file_count%2==10:
+            if file_count%5==0:
                 print("Inten str: " + int_str)
                 print("Typed str: " + typed_str)
                 print("T_mod str: " + t_model_str)
                 print("Combi str: " + correct_str + "\n")
-                pass
 
+    name_model = " "
+    if touch_model_name!=None:
+        name_model = "touch model"
 
-    print(folder_name + "_avg uncorrected error rate revised by LM and " + model_name + " :  " + str(sum(err_rate_list)/len(err_rate_list)))
+    if BLR_model_name!=None:
+        name_model = "BLR_model"
+
+    print(folder_name + "_avg uncorrected error rate revised by LM + " + name_model + " : " + str(sum(err_rate_list)/len(err_rate_list)))
 
     wpm = tlt_wrd_count/(tlt_duration/1000/60)
 
     print(folder_name + "_total wpm:  " + str(wpm) + " words per minute")
     print(" ")
 
-
-def levenshteinDistance(s1, s2):
-    # the mininum of # of operations needed to change a word into another
-    if len(s1) > len(s2):
-        s1, s2 = s2, s1
-
-    distances = range(len(s1) + 1)
-    for i2, c2 in enumerate(s2):
-        distances_ = [i2+1]
-        for i1, c1 in enumerate(s1):
-            if c1 == c2:
-                distances_.append(distances[i1])
-            else:
-                distances_.append(1 + min((distances[i1], distances[i1 + 1], distances_[-1])))
-        distances = distances_
-    return distances[-1]
-
-
-
-def create_touch_data_dict(folder_name):
-    '''
-    Visualize the data on an image
-    Show the starting and the end point of each key
-    '''
-
-    char_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
-                 'u', 'v', 'w', 'x', 'y', 'z', ' ']
-
-    char_touch_dict = {}
-
-    true_coord_dict = true_coord()
-
-    for fname in glob.glob(folder_name + '/*.xls'):
-        # print(fname)
-        # wrd_count = 1
-        # duration = 0
-        df_time = pd.read_excel(fname, sheet_name='input_time')
-        df_touch = pd.read_excel(fname, sheet_name='touch_data')
-        for i, char in df_time['intended character'].iteritems():
-            if char == 'Space':
-                char = ' '
-
-            if isinstance(char, str):
-                if char.lower() in char_list:
-                    start_t = df_time['start time'].iloc[i]
-                    end_t = df_time['end time'].iloc[i]
-
-                    # if end_t-start_t<50:
-                    #     start_t = end_t-100
-                    # this is something issue with the start_time variable. DO NOT USE it !
-                    start_t = end_t - 100
-
-                    coord_data = get_touch_data(df_touch['time'],df_touch,start_t,end_t)
-                    # print(coord_data)
-                    center_coords = np.array(true_coord_dict[char.lower()])
-
-                    # get the mid value not the first value
-                    actual_coords = np.array(coord_data[0])
-
-                    # print(np.array(list(coord_data[0])))
-                    dist = np.linalg.norm(center_coords-actual_coords)
-
-                    # print("dist: " + str(dist))
-
-                    if dist <= 1.5*165:
-                        '''
-                        Get rid of the data that are far out of range 1.5 times the height
-                        '''
-                        if char not in char_touch_dict.keys():
-                            char_touch_dict[char] = [coord_data]
-                        else:
-                            char_touch_dict[char].append(coord_data)
-
-            else:
-                # invalid correction operation
-                pass
-
-    return char_touch_dict
-
-def get_touch_data(df_touch_time,df_touch,start_t, end_t):
-    coord_data = []
-    y_offset = 1405.95
-    for i, t in df_touch_time.iteritems():
-        # print("start_t: " + str(start_t) + " end_t: " + str(end_t) + "| t: " + str(t))
-
-        if t>=start_t and t<=end_t:
-            x = df_touch['x'].iloc[i]
-            y = df_touch['y'].iloc[i]
-            coord_data.append([x,y+y_offset])
-            # print("---start t: " + str(start_t) + " end_t: " + str(end_t) + "| t: " + str(t) + " x: " + str(x) + "| y: " + str(y))
-
-    # only return the first and last entry for interpolation
-    # print("start t: " + str(start_t) + " end_t: " + str(end_t) + " coord list: " + str(coord_data))
-    # return [coord_data[0],coord_data[-1]]
-    if len(coord_data)==0:
-        print("start time: " + str(start_t) + " | end time: " + str(end_t))
-
-    return [coord_data[int(len(coord_data)/2)],coord_data[-1]]
-
-
-def build_model_and_generate_viz(f_name):
-    char_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
-                 'u', 'v', 'w', 'x', 'y', 'z', ' ']
-    char_dict = create_touch_data_dict(f_name)
-    # char_dict = create_touch_data_dict("all_" + posture + "_data")
-    # print(char_dict)
-    for char in char_list:
-        show_char_pattern(char, char_dict, None)
-
-    return construct_gaussian_models(char_dict,None)
-
-def show_char_pattern(character,char_touch_dict,posture):
-    '''
-    plot the touched points on each key
-    :param character:
-    :param char_touch_dict:
-    :return:
-    '''
-    if character in char_touch_dict.keys():
-        img = mpimg.imread('keyboard_screen_shot.jpg')
-        imgplot = plt.imshow(img)
-        coord_list = char_touch_dict[character]
-        char_count = len(coord_list)
-        for coord in coord_list:
-            pt = coord[0]
-            plt.plot(pt[0], pt[1], ".", markersize=1, color='red')
-
-            # pt2 = coord[1]
-            # plt.plot(pt2[0], pt2[1], ".", markersize=1, color='blue')
-
-        # print("saving pattern for " + character)
-        # plt.savefig(posture + "_training_data_pattern/" + character + "_" + str(char_count) + '_pattern.png', dpi=200)
-        plt.clf()
-
-
-def draw_center_point_on_image():
-    '''
-    Draw the center points over key.
-    For verification purpose
-    :return:
-    '''
-    img = mpimg.imread('keyboard_screen_shot.jpg')
-    true_dict = true_coord()
-    imgplot = plt.imshow(img)
-    # print(true_dict.values())
-    for coord in true_dict.values():
-        plt.plot(coord[0], coord[1], ".", markersize=5, color='red')
-    plt.show()
-
-def construct_gaussian_models(char_dict,posture):
-    # fit a 2D gaussian model for each key
-    # plot the mean and variance ellipse on the keyboard layout
-    img = mpimg.imread('keyboard_screen_shot.jpg')
-    imgplot = plt.imshow(img)
-    # convert data to numpy
-    char_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
-                 'u', 'v', 'w', 'x', 'y', 'z', ' ']
-
-    # create a gaussian model for every character
-
-    model_dict = {}
-
-    for char in char_list:
-        if char in char_dict.keys():
-            XY = convert_to_numpy(char_dict[char])
-            x = XY[:, 0]
-            y = XY[:, 1]
-            cov = np.cov(x, y)
-            lambda_, v = np.linalg.eig(cov)
-            lambda_ = np.sqrt(lambda_)
-
-            # plot the ellipse on the image
-            ax = plt.gca()
-
-            plt.plot(np.mean(x), np.mean(y), ".", markersize=1, color='red')
-
-            ax.add_patch(Ellipse(xy=(np.mean(x), np.mean(y)),
-                                 width=lambda_[0] * 2 * 2, height=lambda_[1] * 2 * 2,
-                                 linewidth=1,
-                                 facecolor='none',
-                                 edgecolor='red',
-                                 angle=np.rad2deg(np.arccos(v[0, 0]))))
-
-            # save the model parameter in a dictionary
-            model_dict[char] = {}
-            model_dict[char]['mean'] = np.array([np.mean(x), np.mean(y)])
-            model_dict[char]['cov'] = cov
-
-
-            # print("Generated plot for " + char)
-    # plt.scatter(x, y)
-    # plt.savefig(posture + '_training_data_pattern/' + posture + '_2D_Gauss.png', dpi=200)
-    print("Model generated")
-    return model_dict
-
-
-
-def convert_to_numpy(data):
-    '''
-    Only append the starting data
-    :param data:
-    :return:
-    '''
-    temp_data = []
-    for coord in data:
-        temp_data.append(coord[0])
-    final_data = np.array(temp_data)
-
-    return final_data
 
 def predict_char_tm(coord,context=None):
     # import the touch model
@@ -479,30 +241,61 @@ def predict_char_tm(coord,context=None):
     return pred_char,highest_p
 
 
-def predict_char(coord,context,model_name):
+def predict_char(coord,context,motion,touch_model_name,motion_model_name,BLR_model_name):
 
     # import the touch model
-    f = open(model_name, 'rb')
-    touch_model = pickle.load(f)
-    f.close()
+    if touch_model_name != None:
+        f = open(touch_model_name, 'rb')
+        touch_model = pickle.load(f)
+        f.close()
+    else:
+        touch_model = None
 
     # import the language model
     f = open('KNLM.pickle', 'rb')
     KNL_model = pickle.load(f)
     f.close()
+
+    # import the motion model
+    if motion_model_name != None:
+        f = open(motion_model_name, 'rb')
+        motion_model = pickle.load(f)
+        f.close()
+    else:
+        # print("motion_model")
+        motion_model = None
+
+        # import the motion model
+    if BLR_model_name != None:
+        f = open(BLR_model_name, 'rb')
+        blr_model = pickle.load(f)
+        f.close()
+    else:
+        blr_model = None
+
     highest_p = 0
     pred_char = ''
     char_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
                  'u', 'v', 'w', 'x', 'y', 'z', ' ']
 
-
+    p_mm = 1
+    p_blrm = 1
+    p_tm = 1
     for char in char_list:
-        p_tm = touch_model.score_per_char(char,coord)
+        if touch_model_name != None:
+            p_tm = touch_model.score_per_char(char,coord)
+
         # p_lm = KNL_model.score(char,list(context.split(" ")[-1]))
         p_lm = KNL_model.score(char,list(context))
 
-        p_combined = p_tm*p_lm
-        # p_combined = p_tm
+        if motion_model_name != None:
+            p_mm = motion_model.score_per_char(char,motion)
+
+
+        if BLR_model_name != None:
+           p_blrm = blr_model[char].score(motion,coord)
+
+        p_combined = p_tm*p_lm*p_blrm
 
         # print("char: " + char + "| context: " + context +  "| p_tm: " + str(p_tm) + "| p_lm: " + str(p_lm))
 
@@ -510,17 +303,18 @@ def predict_char(coord,context,model_name):
             highest_p = p_combined
             pred_char = char
 
+    # print(str(touch_model==None) + " | " + str(blr_model==None))
+
     return pred_char,highest_p
 
 
 
 
-
 if __name__ == '__main__':
-
+    warnings.simplefilter('error')
     #
-    text_entry_metric("all_sitting_data_testing")
-    text_entry_metric("all_walking_data_testing")
+    # text_entry_metric("all_sitting_data_testing")
+    # text_entry_metric("all_walking_data_testing")
 
     # text_entry_metric_corrected("all_sitting_data_testing","TM.pickle")
     # text_entry_metric_corrected("all_sitting_data_testing","TM2.pickle")
@@ -529,25 +323,19 @@ if __name__ == '__main__':
     # text_entry_metric_corrected("all_combined_data_testing","TM3.pickle")
     # text_entry_metric_corrected("all_sitting_data_testing","TM3.pickle")
     # text_entry_metric_corrected("all_walking_data_testing","TM3.pickle")
-    text_entry_metric_corrected("all_combined_data_testing", "TM.pickle")
-    text_entry_metric_corrected("all_combined_data_testing", "TM2.pickle")
+    # text_entry_metric_corrected("all_combined_data_testing", "TM.pickle")
+    # text_entry_metric_corrected("all_combined_data_testing", "TM2.pickle")
     # text_entry_metric_corrected("all_combined_data_testing", "TM3.pickle")
 
+    # text_entry_metric("all_sitting_data_testing2")
+    # # text_entry_metric_corrected("all_sitting_data_testing2","TM.pickle","MM.pickle")
+    # text_entry_metric_corrected("all_sitting_data_testing2","TM.pickle",motion_model_name=None)
+
+    text_entry_metric("all_walking_data_testing")
+    text_entry_metric_corrected("all_walking_data_testing",touch_model_name=None,motion_model_name=None,BLR_model_name = "BLR_M.pickle")
+    text_entry_metric_corrected("all_walking_data_testing",touch_model_name="TM.pickle",motion_model_name=None,BLR_model_name=None)
 
 
 
+    # text_entry_metric_corrected("Eric_sitting_data_3", "TM.pickle")
 
-
-    # print("----")
-    #
-    # text_entry_metric("all_walking_data_testing")
-    # model_walking = build_model_and_generate_viz("all_walking_data_training")
-    # text_entry_metric_corrected("all_walking_data_testing", model_walking)
-    #
-    # print("----")
-    #
-    # text_entry_metric_corrected("All_sitting_data_testing", model_walking)
-    #
-    # print("----")
-    #
-    # text_entry_metric_corrected("all_walking_data_testing", model_sitting)
