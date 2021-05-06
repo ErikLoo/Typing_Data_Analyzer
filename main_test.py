@@ -347,6 +347,7 @@ if __name__ == '__main__':
     print("Before applying any models:")
     text_entry_metric("walking_data_testing")
 
+    # 
     train_touch_model()
     train_BLR_model()
 
