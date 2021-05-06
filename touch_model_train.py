@@ -1,11 +1,10 @@
+from utility_funcs import *
 import numpy as np
 import pandas as pd
 import glob
-import cv2
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 from matplotlib.patches import Ellipse
-import numpy as np
 import pickle
 
 
@@ -67,38 +66,6 @@ class Touch_model:
         return prob
 
 
-def true_coord():
-    true_dict = {
-        'a': [108,1660],
-        'b': [648,1825],
-        'c': [432,1825],
-        'd': [324,1660],
-        'e': [270,1495],
-        'f': [432,1660],
-        'g': [540,1660],
-        'h': [648,1660],
-        'i': [810,1495],
-        'j': [756,1660],
-        'k': [864,1660],
-        'l': [972,1660],
-        'm': [864,1825],
-        'n': [756,1825],
-        'o': [918,1495],
-        'p': [1026,1495],
-        'q': [54,1495],
-        'r': [378,1495],
-        's': [216,1660],
-        't': [486,1495],
-        'u': [702,1495],
-        'v': [540,1825],
-        'w': [162,1495],
-        'x': [324,1825],
-        'y': [594,1495],
-        'z': [216,1825],
-        ' ': [539,1988]}
-    return true_dict
-
-
 def create_touch_data_dict(folder_name):
     '''
     Visualize the data on an image
@@ -127,20 +94,10 @@ def create_touch_data_dict(folder_name):
                     start_t = df_time['start time'].iloc[i]
                     end_t = df_time['end time'].iloc[i]
 
-                    # this is something issue with the start_time variable. DO NOT USE it !
-                    # start_t = end_t - 100
-
-                    coord_data = get_touch_data(df_touch['time'],df_touch,start_t,end_t)
-                    # print(coord_data)
+                    actual_coords = get_touch_data(df_touch['time'], df_touch, start_t, end_t)
                     center_coords = np.array(true_coord_dict[char.lower()])
 
-                    # get the mid value not the first value
-                    actual_coords = np.array(coord_data[0])
-
-                    # print(np.array(list(coord_data[0])))
-                    dist = np.linalg.norm(center_coords-actual_coords)
-
-                    # print("dist: " + str(dist))
+                    dist = np.linalg.norm(center_coords - actual_coords)
 
                     if dist <= 1.5*165:
                         '''
@@ -157,37 +114,17 @@ def create_touch_data_dict(folder_name):
 
     return char_touch_dict
 
-def get_touch_data(df_touch_time,df_touch,start_t, end_t):
-    coord_data = []
-    y_offset = 1405.95
-    for i, t in df_touch_time.iteritems():
-        # print("start_t: " + str(start_t) + " end_t: " + str(end_t) + "| t: " + str(t))
-
-        if t>=start_t and t<=end_t:
-            x = df_touch['x'].iloc[i]
-            y = df_touch['y'].iloc[i]
-            coord_data.append([x,y+y_offset])
-            # print("---start t: " + str(start_t) + " end_t: " + str(end_t) + "| t: " + str(t) + " x: " + str(x) + "| y: " + str(y))
-
-    if len(coord_data)==0:
-        print("start time: " + str(start_t) + " | end time: " + str(end_t))
-
-    # return [coord_data[int(len(coord_data)/2)],coord_data[-1]]
-    return [coord_data[0],coord_data[-1]]
-
-
 
 def build_model_and_generate_viz(f_name):
     char_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
                  'u', 'v', 'w', 'x', 'y', 'z', ' ']
     char_dict = create_touch_data_dict(f_name)
 
-    # print(char_dict['a'])
 
-    return construct_gaussian_models(char_dict,None)
+    return construct_gaussian_models(char_dict,f_name)
 
 
-def construct_gaussian_models(char_dict,posture):
+def construct_gaussian_models(char_dict,f_name):
     # fit a 2D gaussian model for each key
     # plot the mean and variance ellipse on the keyboard layout
     img = mpimg.imread('keyboard_screen_shot.jpg')
@@ -197,6 +134,12 @@ def construct_gaussian_models(char_dict,posture):
                  'u', 'v', 'w', 'x', 'y', 'z', ' ']
 
     # create a gaussian model for every character
+
+    if 'sitting' in f_name.split('_'):
+        my_color = 'red'
+    else:
+        my_color = 'green'
+
 
     model_dict = {}
 
@@ -209,27 +152,26 @@ def construct_gaussian_models(char_dict,posture):
             x = XY[:, 0]
             y = XY[:, 1]
 
-            # if char == 'a':
-            #     print(XY)
-            #     print(x)
-            #     print(y)
-            #     #
-
+            # change the covariance terms to zero
             cov = np.cov(x, y)
+            cov[0][1],cov[1][0] = 0,0
+
             lambda_, v = np.linalg.eig(cov)
             lambda_ = np.sqrt(lambda_)
 
             # plot the ellipse on the image
             ax = plt.gca()
 
-            plt.plot(np.mean(x), np.mean(y), ".", markersize=1, color='red')
+            plt.plot(np.mean(x), np.mean(y), ".", markersize=1, color=my_color)
+            first_v = v[:, 0]
+            slope = first_v[1] / first_v[0]
 
             ax.add_patch(Ellipse(xy=(np.mean(x), np.mean(y)),
                                  width=lambda_[0] * 2 * 2, height=lambda_[1] * 2 * 2,
                                  linewidth=1,
                                  facecolor='none',
-                                 edgecolor='red',
-                                 angle=np.rad2deg(np.arccos(v[0, 0]))))
+                                 edgecolor=my_color,
+                                 angle=np.rad2deg(np.arctan(slope))))
 
             # save the model parameter in a dictionary
             model_dict[char] = {}
@@ -239,31 +181,20 @@ def construct_gaussian_models(char_dict,posture):
 
             # print("Generated plot for " + char)
     # plt.scatter(x, y)
-    # plt.savefig(posture + '_training_data_pattern/' + posture + '_2D_Gauss.png', dpi=200)
+    print("Generated viz for " + f_name)
+    plt.savefig(f_name+'_2D_Gauss.png', dpi=200)
     return model_dict
 
 
-# def convert_to_numpy(data):
-#     '''
-#     Only append the starting data
-#     :param data:
-#     :return:
-#     '''
-#     temp_data = []
-#     for coord in data:
-#         temp_data.append(coord[0])
-#     final_data = np.array(temp_data)
-#
-#     return final_data
+def train_touch_model():
+
+    f = open('TM_W.pickle', 'wb')
+    pickle.dump( Touch_model(build_model_and_generate_viz("walking_data_training")), f)
+    f.close()
 
 
 if __name__ == '__main__':
-    # train the model
-    model_sitting = build_model_and_generate_viz("all_walking_data_training")
-    touch_model_sitting = Touch_model(model_sitting)
 
-    f = open('TM.pickle', 'wb')
-    pickle.dump(touch_model_sitting, f)
-    f.close()
+    train_touch_model()
 
 

@@ -3,6 +3,7 @@ import glob as glob
 import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+import numpy as np
 from matplotlib.patches import Ellipse
 import pickle
 from scipy import signal
@@ -10,6 +11,10 @@ from scipy import signal
 
 def levenshteinDistance(s1, s2):
     # the mininum of # of operations needed to change a word into another
+
+    ins_count = np.absolute(np.heaviside(len(s1)-len(s2),0)*(len(s1)-len(s2)))
+    del_count = np.absolute(np.heaviside(len(s2)-len(s1),0)*(len(s2)-len(s1)))
+
     if len(s1) > len(s2):
         s1, s2 = s2, s1
 
@@ -22,13 +27,17 @@ def levenshteinDistance(s1, s2):
             else:
                 distances_.append(1 + min((distances[i1], distances[i1 + 1], distances_[-1])))
         distances = distances_
-    return distances[-1]
+
+    sub_count = distances[-1]-(ins_count+del_count)
+
+    return distances[-1],ins_count,del_count,sub_count
 
 
 def true_coord():
     '''
 
-    the true coords of each key on the phone
+    adjust these coords for different phone models
+    the true coords of each key on Samsung Galaxy S8
     '''
     true_dict = {
         'a': [108,1660],
@@ -83,70 +92,7 @@ def get_touch_data(df_touch_time,df_touch,start_t, end_t):
     if len(coord_data)==0:
         print("start time: " + str(start_t) + " | end time: " + str(end_t))
 
-    # return [coord_data[int(len(coord_data)/2)],coord_data[-1]]
-    return [coord_data[0],coord_data[-1]]
-
-
-
-def create_touch_data_dict(folder_name):
-    '''
-    {char : [[x1,y1],[x2,y2]]}
-    '''
-
-    char_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
-                 'u', 'v', 'w', 'x', 'y', 'z', ' ']
-
-    char_touch_dict = {}
-
-    true_coord_dict = true_coord()
-
-    for fname in glob.glob(folder_name + '/*.xls'):
-        # print(fname)
-        # wrd_count = 1
-        # duration = 0
-        df_time = pd.read_excel(fname, sheet_name='input_time')
-        df_touch = pd.read_excel(fname, sheet_name='touch_data')
-        for i, char in df_time['intended character'].iteritems():
-            if char == 'Space':
-                char = ' '
-
-            if isinstance(char, str):
-                if char.lower() in char_list:
-                    start_t = df_time['start time'].iloc[i]
-                    end_t = df_time['end time'].iloc[i]
-
-                    # if end_t-start_t<50:
-                    #     start_t = end_t-100
-                    # this is something issue with the start_time variable. DO NOT USE it !
-                    start_t = end_t - 100
-
-                    coord_data = get_touch_data(df_touch['time'],df_touch,start_t,end_t)
-                    # print(coord_data)
-                    center_coords = np.array(true_coord_dict[char.lower()])
-
-                    # get the mid value not the first value
-                    actual_coords = np.array(coord_data[0])
-
-                    # print(np.array(list(coord_data[0])))
-                    dist = np.linalg.norm(center_coords-actual_coords)
-
-                    # print("dist: " + str(dist))
-
-                    if dist <= 1.5*165:
-                        '''
-                        Get rid of the data that are far out of range 1.5 times the height
-                        '''
-                        if char not in char_touch_dict.keys():
-                            char_touch_dict[char] = [coord_data]
-                        else:
-                            char_touch_dict[char].append(coord_data)
-
-            else:
-                # invalid correction operation
-                pass
-
-    return char_touch_dict
-
+    return coord_data[0]
 
 
 def show_char_pattern(character,char_touch_dict,posture):
@@ -195,8 +141,23 @@ def get_motion_data(df_accel,df_gyro,start_t, end_t):
     {char : [accel_x,accel_y,accel_z,gyro_x,gyro_y,gyro_z]}
     10 data points for each element
     '''
-    df_accel_time = df_accel['time']
-    df_gyro_time = df_gyro['time']
+
+    # avg filer window size = 50
+    n = 50
+
+    MA_x = pd.Series(df_accel['accel_x'].rolling(n, min_periods=n).median(), name='accel_x_MA')
+    MA_y = pd.Series(df_accel['accel_y'].rolling(n, min_periods=n).median(), name='accel_y_MA')
+    MA_z = pd.Series(df_accel['accel_z'].rolling(n, min_periods=n).median(), name='accel_z_MA')
+    df_accel_avg = df_accel.join(MA_x).join(MA_y).join(MA_z)
+
+    df_accel_time = df_accel_avg['time']
+
+    MA_x = pd.Series(df_gyro['gyro_x'].rolling(n, min_periods=n).mean(), name='gyro_x_MA')
+    MA_y = pd.Series(df_gyro['gyro_y'].rolling(n, min_periods=n).mean(), name='gyro_y_MA')
+    MA_z = pd.Series(df_gyro['gyro_z'].rolling(n, min_periods=n).mean(), name='gyro_z_MA')
+    df_gyro_avg = df_gyro.join(MA_x).join(MA_y).join(MA_z)
+
+    df_gyro_time = df_gyro_avg['time']
 
     accel_x_list = []
     accel_y_list = []
@@ -206,80 +167,36 @@ def get_motion_data(df_accel,df_gyro,start_t, end_t):
     gyro_y_list = []
     gyro_z_list = []
 
-    # y_offset = 1405.95
+
     for i, t in df_accel_time.iteritems():
         # print("start_t: " + str(start_t) + " end_t: " + str(end_t) + "| t: " + str(t))
 
         if t>=start_t and t<=end_t:
-            accel_x = df_accel['accel_x'].iloc[i]
-            accel_y = df_accel['accel_y'].iloc[i]
-            accel_z = df_accel['accel_z'].iloc[i]
+            accel_x = df_accel_avg['accel_x_MA'].iloc[i]
+            accel_y = df_accel_avg['accel_y_MA'].iloc[i]
+            accel_z = df_accel_avg['accel_z_MA'].iloc[i]
 
             accel_x_list.append(accel_x)
             accel_y_list.append(accel_y)
             accel_z_list.append(accel_z)
 
-            # print("---start t: " + str(start_t) + " end_t: " + str(end_t) + "| t: " + str(t) + " x: " + str(x) + "| y: " + str(y))
-
-    # re-sample the data list to 10 data points per list in here
-    rs_accel_x = signal.resample(accel_x_list, num = 10)
-    rs_accel_y = signal.resample(accel_y_list, num = 10)
-    rs_accel_z = signal.resample(accel_z_list, num = 10)
-
-
-
-
     for i, t in df_gyro_time.iteritems():
         # print("start_t: " + str(start_t) + " end_t: " + str(end_t) + "| t: " + str(t))
 
         if t>=start_t and t<=end_t:
-            gyro_x = df_gyro['gyro_x'].iloc[i]
-            gyro_y = df_gyro['gyro_y'].iloc[i]
-            gyro_z = df_gyro['gyro_z'].iloc[i]
+            gyro_x = df_gyro_avg['gyro_x_MA'].iloc[i]
+            gyro_y = df_gyro_avg['gyro_y_MA'].iloc[i]
+            gyro_z = df_gyro_avg['gyro_z_MA'].iloc[i]
 
             gyro_x_list.append(gyro_x)
             gyro_y_list.append(gyro_y)
             gyro_z_list.append(gyro_z)
 
-            # print("---start t: " + str(start_t) + " end_t: " + str(end_t) + "| t: " + str(t) + " x: " + str(x) + "| y: " + str(y))
-
-    # re-sample the data list to 10 data points per list in here
-    # rs_gyro_x = signal.resample(gyro_x_list, num = 10)
-    # rs_gyro_y = signal.resample(gyro_y_list, num = 10)
-    # rs_gyro_z = signal.resample(gyro_z_list, num = 10)
-
-    # integrate to obtain the velocity change
-    speed_x = integrate_to_get_speed(start_t,end_t,accel_x_list)
-    speed_y = integrate_to_get_speed(start_t,end_t,accel_y_list)
-    speed_z = integrate_to_get_speed(start_t,end_t,accel_z_list)
-
-    # get the change in the angular velocity
     omega_x = gyro_x_list[-1]
     omega_y = gyro_y_list[-1]
     omega_z = gyro_z_list[-1]
 
-    accl_x = accel_x_list[-1]
-    accl_y = accel_y_list[-1]
-    accl_z = accel_z_list[-1]
-
-
-    # motion_data = np.hstack((rs_accel_x,rs_accel_y,rs_accel_z,rs_gyro_x,rs_gyro_y,rs_gyro_z))
-
-    # motion_data = np.hstack((rs_accel_x,rs_accel_y,rs_accel_z))
-    # motion_data = np.hstack((rs_gyro_x, rs_gyro_y, rs_gyro_z))
-
-    # motion_data = np.hstack((speed_x,speed_y,speed_z,omega_x,omega_y,omega_z))
-
-    # motion_data = np.hstack((accl_x,accl_y,accl_z,speed_x,speed_y,speed_z,omega_x,omega_y,omega_z))
-
-    # motion_data = np.hstack((omega_x,omega_y,omega_z))
-    motion_data = np.hstack((accl_x,accl_y,accl_z))
-    # print(motion_data)
-    # # viz the original signal and the resampled signal
-    # plt.plot(np.linspace(0,len(accel_x_list),len(accel_x_list)),accel_x_list, ".", markersize=1, color='blue')
-    # # plt.plot(np.linspace(0,len(accel_x_list),10),rs_accel_x, ".", markersize=5, color='red')
-    # plt.show()
-    # combine the data from all the axes into one feature vector
+    motion_data = np.hstack((omega_x,omega_y,omega_z))
 
     return motion_data
 
@@ -294,3 +211,38 @@ def integrate_to_get_speed(start_t,end_t,accel_vec):
     # print("delta: " + str(delta_t))
 
     return delta_t*trap
+
+
+def integrate_to_get_distance(start_t,end_t,accel_vec):
+    dt = (end_t-start_t)/(len(accel_vec)-1)
+    speed_vec=[]
+    for i in range(len(accel_vec)):
+        if i!=0:
+            speed = integrate_to_get_speed(start_t,start_t+i*dt,accel_vec[0:i+1])
+            speed_vec.append(speed)
+
+    trap = np.trapz(speed_vec)
+
+    return dt*trap
+
+
+def generate_confusion_matrix(int_str,typed_str,f_name):
+    char_list = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+                 'u', 'v', 'w', 'x', 'y', 'z', ' ']
+    int_chars = list(int_str)
+    typed_chars = list(typed_str)
+
+    data = {'int_chars': list(int_str),
+            'typed_chars': list(typed_str)
+            }
+
+    df = pd.DataFrame(data, columns=['int_chars', 'typed_chars'])
+    confusion_matrix = pd.crosstab(df['int_chars'], df['typed_chars'], rownames=['Intended'], colnames=['Typed'])
+
+    row_count = confusion_matrix.shape[0]
+    for i in range(row_count):
+        confusion_matrix.iloc[[i]] = confusion_matrix.iloc[[i]]/confusion_matrix.iloc[[i]].values.sum()
+    confusion_matrix.to_csv(f_name + '_confusion_mtx.csv')
+
+    # print(f_name+" confusion mtx generated to file")
+    return confusion_matrix

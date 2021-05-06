@@ -261,6 +261,7 @@ def construct_gaussian_models(char_dict,posture):
             x = XY[:, 0]
             y = XY[:, 1]
             cov = np.cov(x, y)
+
             lambda_, v = np.linalg.eig(cov)
             lambda_ = np.sqrt(lambda_)
 

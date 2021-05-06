@@ -52,6 +52,7 @@ class Motion_model:
 
     def score_per_char(self,char,motion):
         # build a model from the dict
+        # print(self.model_para)
 
         mean = self.model_para[char]['mean']
         cov = self.model_para[char]['cov']
@@ -82,6 +83,33 @@ def create_char_motion_dict(folder_name):
         df_accel = pd.read_excel(fname, sheet_name='accel_data')
         df_gyro = pd.read_excel(fname, sheet_name='gyro_data')
 
+        # n = 50
+        # MA_x = pd.Series(df_accel['accel_x'].rolling(n, min_periods=n).median(), name='accel_x_MA')
+        # MA_y = pd.Series(df_accel['accel_y'].rolling(n, min_periods=n).median(), name='accel_y_MA')
+        # MA_z = pd.Series(df_accel['accel_z'].rolling(n, min_periods=n).median(), name='accel_z_MA')
+        # df_accel = df_accel.join(MA_x).join(MA_y).join(MA_z)
+        #
+        # n = 50
+        # MA_x = pd.Series(df_gyro['gyro_x'].rolling(n, min_periods=n).median(), name='gyro_x_MA')
+        # MA_y = pd.Series(df_gyro['gyro_y'].rolling(n, min_periods=n).median(), name='gyro_y_MA')
+        # MA_z = pd.Series(df_gyro['gyro_z'].rolling(n, min_periods=n).median(), name='gyro_z_MA')
+        # df_gyro = df_gyro.join(MA_x).join(MA_y).join(MA_z)
+
+        n = 50
+        MA_x = pd.Series(df_accel['accel_x'].rolling(n, min_periods=n).mean(), name='accel_x_MA')
+        MA_y = pd.Series(df_accel['accel_y'].rolling(n, min_periods=n).mean(), name='accel_y_MA')
+        MA_z = pd.Series(df_accel['accel_z'].rolling(n, min_periods=n).mean(), name='accel_z_MA')
+        df_accel = df_accel.join(MA_x).join(MA_y).join(MA_z)
+
+        n = 50
+        MA_x = pd.Series(df_gyro['gyro_x'].rolling(n, min_periods=n).mean(), name='gyro_x_MA')
+        MA_y = pd.Series(df_gyro['gyro_y'].rolling(n, min_periods=n).mean(), name='gyro_y_MA')
+        MA_z = pd.Series(df_gyro['gyro_z'].rolling(n, min_periods=n).mean(), name='gyro_z_MA')
+        df_gyro = df_gyro.join(MA_x).join(MA_y).join(MA_z)
+
+
+        old_end_t = 0
+        old_start_t = 0
 
         for i, char in df_time['intended character'].iteritems():
             if char == 'Space':
@@ -94,18 +122,25 @@ def create_char_motion_dict(folder_name):
 
                     # only record the time segment about 0.1 before the start time
                     # start_t = end_t - 100
+                    if i == 0:
+                        old_end_t = end_t - 100
+                        old_start_t = start_t - 100
 
-                    coord_data = get_touch_data(df_touch['time'],df_touch,start_t,end_t)
+                    actual_coords = get_touch_data(df_touch['time'],df_touch,start_t,end_t)
                     # might not be 0.1s before the start time
                     # motion_data = get_motion_data(df_accel,df_gyro,start_t-100,start_t)
                     # motion_data = get_motion_data(df_accel,df_gyro,start_t-100,start_t)
-                    motion_data = get_motion_data(df_accel,df_gyro, start_t - 100, start_t)
+                    # motion_data = get_motion_data(df_accel,df_gyro, start_t - 100, start_t)
+                    motion_data = get_motion_data(df_accel,df_gyro,old_start_t,start_t)
+
+                    old_end_t = end_t
+                    old_start_t = start_t
 
                     # print(coord_data)
                     center_coords = np.array(true_coord_dict[char.lower()])
 
                     # get the mid value not the first value
-                    actual_coords = np.array(coord_data[0])
+                    # actual_coords = np.array(coord_data[0])
 
                     dist = np.linalg.norm(center_coords-actual_coords)
 
@@ -167,7 +202,9 @@ def construct_motion_gaussian_models(char_dict):
             model_dict[char] = {}
             model_dict[char]['mean'] = mu
 
+            # model_dict[char]['cov'] = np.diag(np.diag(cov))
             model_dict[char]['cov'] = cov
+
 
             sigma_det = np.linalg.det(cov)
 
@@ -177,6 +214,7 @@ def construct_motion_gaussian_models(char_dict):
                 print(char + " : " + str(sigma_det))
                 print(X_t.shape)
                 print(cov)
+
             # print(cov.shape)
             # print("Generated plot for " + char)
     # plt.scatter(x, y)
@@ -191,10 +229,36 @@ def build_motion_model(f_name):
     :return:
     '''
     char_dict = create_char_motion_dict(f_name)
+
     model_dict = construct_motion_gaussian_models(char_dict)
 
+    assert(len(model_dict)>0)
+    # print(model_dict)
     # print(model_dict)
     return Motion_model(model_dict)
+
+
+def train_motion_model():
+    print("Start motion model training")
+    motion_model = build_motion_model("all_walking_data_training_2")
+    f = open('MM_W.pickle', 'wb')
+    pickle.dump(motion_model, f)
+    f.close()
+
+    print("Start motion model training")
+    motion_model = build_motion_model("all_sitting_data_training_2")
+    f = open('MM_S.pickle', 'wb')
+    pickle.dump(motion_model, f)
+    f.close()
+
+    print("motion model generated")
+
+
+def train_motion_model_to_file(training_dir,output_address,tag):
+    motion_model = build_motion_model(training_dir)
+    f = open(output_address + '/MM_' + tag + '.pickle', 'wb')
+    pickle.dump(motion_model, f)
+    f.close()
 
 
 if __name__ == '__main__':
@@ -206,8 +270,17 @@ if __name__ == '__main__':
     # pickle.dump(motion_model, f)
     # f.close()
 
-    motion_model = build_motion_model("Eric_walking_data_2")
+    # motion_model = build_motion_model("all_sitting_data_training_2")
+    #
+    # f = open('MM_S.pickle', 'wb')
+    # pickle.dump(motion_model, f)
+    # f.close()
 
-    f = open('MM_walking.pickle', 'wb')
+    motion_model = build_motion_model("all_walking_data_training_2")
+
+    f = open('MM_W.pickle', 'wb')
     pickle.dump(motion_model, f)
     f.close()
+    print("motion model generated")
+
+
